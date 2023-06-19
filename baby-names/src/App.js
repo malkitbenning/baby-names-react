@@ -1,8 +1,14 @@
+import React, { useState } from "react";
 import babyNamesArray from "./babyNamesData.json";
+import BabyNamesContainer from "./BabyNamesContainer";
 import "./App.css";
 
 function App() {
-  console.log(babyNamesArray);
+  const [searchName, setSearchName] = useState("");
+
+  function updateSearchName(event) {
+    setSearchName(event.target.value);
+  }
 
   function compare(a, b) {
     if (a.name < b.name) {
@@ -18,15 +24,11 @@ function App() {
 
   return (
     <div className="App">
-      <section className="baby-names-section">
-        {babyNamesArray.map((aBabyName) => {
-          return aBabyName.sex === "m" ? (
-            <span className="name-container boy-color">{aBabyName.name}</span>
-          ) : (
-            <span className="name-container girl-color">{aBabyName.name}</span>
-          );
-        })}
-      </section>
+      <input type="text" value={searchName} onChange={updateSearchName} />
+      <BabyNamesContainer
+        babyNamesArray={babyNamesArray}
+        searchName={searchName}
+      />
     </div>
   );
 }
