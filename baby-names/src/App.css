@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+}
+.baby-names-section{
+  margin: 1rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  border: 2px solid red;
+}
+.name-container {
+  padding: 4px;
+  margin: 5px;
+  border-radius: 10%;
+}
+
+.boy-color {
+  background-color: skyblue;
+}
+
+.girl-color {
+  background-color: pink;
+}
+
+
