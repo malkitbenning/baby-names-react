@@ -25,10 +25,10 @@ function App() {
   }
 
   babyNamesArray.sort(compare);
-  const [babyNamesList, setBabyNamesList] = useState(babyNamesArray);
+  const babyNamesList = babyNamesArray;
 
-  let [babyNamesListFiltered, setBabyNamesListFiltered] =
-    useState(babyNamesArray);
+  let [babyNamesListFiltered, setBabyNamesListFiltered]
+  = useState(babyNamesArray);
 
   function allNames() {
     setGenderFilter("a");
