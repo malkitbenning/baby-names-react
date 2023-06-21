@@ -5,3 +5,11 @@
 .search-input {
   padding: 5px;
 }
+
+.btn-red {
+  background-color: lightcoral;
+}
+
+.btn-blue {
+  background-color: skyblue;
+}
